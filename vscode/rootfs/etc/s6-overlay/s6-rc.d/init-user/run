@@ -31,6 +31,9 @@ if ! bashio::fs.directory_exists "${SSH_USER_PATH}"; then
         || bashio::exit.nok \
             'Failed setting permissions on persistent .ssh folder'
 fi
+if [ -d ~/.ssh ] && [ ! -L ~/.ssh ]; then
+    rm -rf ~/.ssh
+fi
 ln -sn "${SSH_USER_PATH}" ~/.ssh || bashio::log.warning "Failed linking .ssh"
 
 # Sets up ZSH shell
