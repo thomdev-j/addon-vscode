@@ -28,18 +28,18 @@ RUN \
     \
     && apt-get install -y --no-install-recommends \
         ack=3.8.1-1 \
-        libarchive-tools=3.7.4-4 \
+        libarchive-tools \
         build-essential=12.12 \
         colordiff=1.0.21-1 \
-        git=1:2.47.3-0+deb13u1 \
+        git \
         iputils-ping=3:20240905-3 \
-        locales=2.41-12+deb13u2 \
-        mariadb-client=1:11.8.6-0+deb13u1 \
+        locales \
+        mariadb-client \
         mosquitto-clients=2.0.21-1 \
         net-tools=2.10-1.3 \
         nmap=7.95+dfsg-3 \
-        openssh-client=1:10.0p1-7+deb13u1 \
-        openssl=3.5.5-1~deb13u1 \
+        openssh-client \
+        openssl \
         python3-dev=3.13.5-1 \
         python3-venv=3.13.5-1 \
         python3=3.13.5-1 \
@@ -47,7 +47,7 @@ RUN \
         uuid-runtime=2.41-5 \
         wget=1.25.0-2 \
         zip=3.0-15 \
-        zsh=5.9-8+b21 \
+        zsh \
         less=668-1 \
     \
     && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
